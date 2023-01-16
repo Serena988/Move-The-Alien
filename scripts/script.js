@@ -9,24 +9,24 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function stars() {
-  const count = 200;
+  const count = 100;
   const scene = document.querySelector('.scene');
   let i = 0;
   while (i < count) {
     const star = document.createElement('i');
     const x1 = Math.floor(Math.random() * window.innerWidth);
     const y1 = Math.floor(Math.random() * window.innerHeight);
-    const duration = Math.random() * 10;
     const size = Math.random() * 2;
-
+    const animationTime = Math.random() * 10;
+    
     star.style.left = `${x1}px`;
     star.style.top = `${y1}px`;
     star.style.width = `${1 + size}px`;
     star.style.height = `${1 + size}px`;
-    star.style.animationDuration = `${20 + duration}s`;
+    star.style.animationDuration = `${20 + animationTime}s`
     scene.appendChild(star);
-    i++;
-  }
+    i++
+}
 }
 stars();
 

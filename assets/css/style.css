@@ -72,13 +72,13 @@ h1 {
   position: absolute;
   background: #fff;
   border-radius: 50%;
-  animation: animate linear infinite;
+  animation: animate-i 10s linear infinite, box-shadow 10s linear infinite;
 }
 
-@keyframes animate {
+@keyframes animate-i {
   0% {
-    opacity: 0;
     transform: translatex(0);
+    opacity: 0;
   }
 
   10%,
@@ -89,6 +89,22 @@ h1 {
   100% {
     opacity: 0;
     transform: translatex(100px);
+  }
+}
+
+
+@keyframes box-shadow {
+  0% {
+    box-shadow: 0 0 3px hsla(0, 0%, 100%, 0.103);
+  }
+
+  10%,
+  90% {
+    box-shadow: 0 0 6px 2px hsla(0, 0%, 100%, 0.252);
+  }
+
+  100% {
+    box-shadow: 0 0 3px hsla(0, 0%, 100%, 0.103);
   }
 }
 
