@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+h1 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  position: relative;
+  top: 40%;
+  font-size: 2.5rem;
+  pointer-events: none;
+}
+
+.disappear {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(180deg,
+      hsl(0deg 0% 0%) 21%,
+      hsl(255deg 32% 7%) 81%,
+      hsl(255deg 33% 14%) 95%,
+      hsl(257deg 37% 20%) 100%);
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 0;
+  box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+}
+
+.craters {
+  background-image: url(/assets/images/bgMoon.png);
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.4;
+}
+
+.forest {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transform: scale(1.2);
+}
+
+.scene i {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  animation: animate linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translatex(0);
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translatex(100px);
+  }
+}
+
+.alien {
+  position: relative;
+  --x: 0;
+  --y: 0;
+  --rotate: 0;
+  transform: translatex(var(--x)) translatey(var(--y)) rotate(var(--rotate));
+  z-index: 2;
+}
