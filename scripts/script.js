@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   const move = document.createElement('h1');
-  move.textContent = 'Move the alien with your keyboard!';
+  move.textContent = 'Move the alien with your arrow keys!';
   const moon = document.querySelector('.moon');
   moon.insertAdjacentElement('beforebegin', move);
   setTimeout(() => {
