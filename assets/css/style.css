@@ -46,7 +46,7 @@ h1 {
 }
 
 .craters {
-  background-image: url(/assets/images/bgMoon.png);
+  background-image: url(../images/bgMoon.png);
   background-position: center;
   background-size: 100%;
   width: 100%;
