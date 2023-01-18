@@ -118,4 +118,5 @@ h1 {
   --rotate: 0;
   transform: translatex(var(--x)) translatey(var(--y)) rotate(var(--rotate));
   z-index: 2;
+  transition: all 1.5s ease-out;
 }
